@@ -10,7 +10,7 @@ class LogInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        val btn = findViewById<Button>(R.id.button)
+        val btn = findViewById<Button>(R.id.loginButton)
         btn.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             this.startActivity(intent)
