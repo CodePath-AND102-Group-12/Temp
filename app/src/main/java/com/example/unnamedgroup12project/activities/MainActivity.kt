@@ -7,9 +7,7 @@ import androidx.activity.viewModels
 import androidx.fragment.app.commit
 import com.example.unnamedgroup12project.ProjectViewModel
 import com.example.unnamedgroup12project.R
-import com.example.unnamedgroup12project.fragments.MapFragment
-import com.example.unnamedgroup12project.fragments.MarketListingFragment
-import com.example.unnamedgroup12project.fragments.SettingsFragment
+import com.example.unnamedgroup12project.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -54,6 +52,35 @@ class MainActivity : AppCompatActivity() {
                     }
                     true
                 }
+
+                (R.id.action_goto_shopping_list) -> {
+                    val supportFragmentManager = supportFragmentManager
+                    supportFragmentManager.commit {
+                        //TODO: Implement animations here!
+                        //setCustomAnimations(
+                        //    R.anim.fade_in,
+                        //   R.anim.slide_out
+                        //)
+                        replace(R.id.content, ShoppingListFragment())
+                        addToBackStack(null)
+                    }
+                    true
+                }
+
+                (R.id.action_goto_calendar) -> {
+                    val supportFragmentManager = supportFragmentManager
+                    supportFragmentManager.commit {
+                        //TODO: Implement animations here!
+                        //setCustomAnimations(
+                        //    R.anim.fade_in,
+                        //   R.anim.slide_out
+                        //)
+                        replace(R.id.content, CalendarFragment())
+                        addToBackStack(null)
+                    }
+                    true
+                }
+
                 (R.id.action_goto_settings) -> {
                     val supportFragmentManager = supportFragmentManager
                     supportFragmentManager.commit {
