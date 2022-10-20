@@ -14,7 +14,7 @@ class MarketListingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_market, container, false)
+        val view = inflater.inflate(R.layout.fragment_market_listing, container, false)
         return view
     }
 }
