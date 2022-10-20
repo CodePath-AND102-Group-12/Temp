@@ -21,6 +21,7 @@
             android:adjustViewBounds="true"
             android:scaleType="fitStart"
             app:srcCompat="@drawable/hero_image" />
+        <!-- Hero Image from Job illustrations by Storyset: https://storyset.com/job-->
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/userLayout"
@@ -64,6 +65,7 @@
             android:id="@+id/loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:text="Log In"
             android:layout_gravity="center_horizontal"/>
 
