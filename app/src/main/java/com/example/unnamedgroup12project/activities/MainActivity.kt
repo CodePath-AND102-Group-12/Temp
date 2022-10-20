@@ -9,10 +9,12 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
 import com.example.unnamedgroup12project.ProjectViewModel
 import com.example.unnamedgroup12project.R
+import com.example.unnamedgroup12project.databinding.ActivityMainBinding
 import com.example.unnamedgroup12project.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
 
     // fragment support, each fragment gets initialized
     private val fragmentManager: FragmentManager = supportFragmentManager
@@ -25,14 +27,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val viewRoot = binding.root
+        setContentView(viewRoot)
 
         /** ViewModel **/
         val viewModel: ProjectViewModel by viewModels()
 
         /** Navigation **/
         val nav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-
 
         nav.setOnItemSelectedListener { item ->
             lateinit var fragment: Fragment
