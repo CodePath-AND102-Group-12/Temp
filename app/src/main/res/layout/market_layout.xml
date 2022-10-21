@@ -1,38 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/materialCardViewElevatedStyle"
+    android:id="@+id/allMarketsRVLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/allMarketsRVLayout"
-    android:layout_marginVertical="10dp">
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
 
     <!-- maybe market image could relate to category? -->
-    <ImageView
-        android:id="@+id/marketImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
 
-    <TextView
-        android:id="@+id/marketName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Market Name"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:padding="5dp"
-        app:layout_constraintStart_toEndOf="@id/marketImage"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/marketCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        app:layout_constraintStart_toEndOf="@id/marketImage"
-        app:layout_constraintTop_toBottomOf="@id/marketName"
-        android:text="Market Category" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/marketImage"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/farm_product" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/marketName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Market Name"
+                android:textSize="20sp"
+                android:layout_marginBottom="4dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/marketCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Market Category" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="vertical">
+                <Button
+                    style="?attr/materialIconButtonFilledStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Navigate"
+                    app:icon="@drawable/ic_directions"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
