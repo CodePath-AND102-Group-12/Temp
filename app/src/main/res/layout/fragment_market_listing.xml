@@ -22,6 +22,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <!-- Horizontal RV to have "featured" or "sponsored" markets - probably just keep as some random 3 from the list.
 
          This could be a way to generate revenue for the app. -->
@@ -31,6 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/featuredMarkets"/>
+
 
         <TextView
             android:id="@+id/allMarkets"
@@ -43,12 +45,45 @@
             app:layout_constraintStart_toStartOf="parent"
             android:text="All Markets" />
 
+        <LinearLayout
+            android:id="@+id/searchOrFilterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/allMarkets">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/searchLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Search Markets"
+                android:textColorHint="?attr/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/searchInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
         <!-- Vertical RV to list all of the markets -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/allMarketsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/allMarkets"
+            app:layout_constraintTop_toBottomOf="@id/searchOrFilterLayout"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="65dp"/>
 
