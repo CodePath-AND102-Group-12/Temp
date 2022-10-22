@@ -1,15 +1,17 @@
 package com.example.unnamedgroup12project.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.unnamedgroup12project.Communicator
 import com.example.unnamedgroup12project.R
 import com.example.unnamedgroup12project.adapters.FeaturedMarketListingAdapter
 import com.example.unnamedgroup12project.adapters.MarketListingAdapter
@@ -20,6 +22,8 @@ class MarketListingFragment : Fragment() {
     private lateinit var featuredMarketListingAdapter : FeaturedMarketListingAdapter
     private lateinit var allMarketListingAdapter: MarketListingAdapter
     private val marketList = arrayListOf<Market>()
+
+    private lateinit var comm: Communicator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,7 +51,12 @@ class MarketListingFragment : Fragment() {
 
         val allMarketListLayoutManager = GridLayoutManager(context, 2)
         val allMarketListRecyclerView = view.findViewById<RecyclerView>(R.id.allMarketsRecyclerView)
-        allMarketListingAdapter = MarketListingAdapter(marketList)
+
+        comm = requireActivity() as Communicator
+
+        allMarketListingAdapter = MarketListingAdapter(marketList, this.requireActivity().applicationContext,
+            requireActivity() as AppCompatActivity, comm
+        )
 
         allMarketListRecyclerView.adapter = allMarketListingAdapter
         allMarketListRecyclerView.layoutManager = allMarketListLayoutManager
@@ -68,6 +77,7 @@ class MarketListingFragment : Fragment() {
                 spinner.adapter = adapter
             }
         }
+
 
         return view
     }
