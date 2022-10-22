@@ -1,19 +1,19 @@
 package com.example.unnamedgroup12project.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.commit
+import androidx.fragment.app.FragmentTransaction
+import com.example.unnamedgroup12project.Communicator
 import com.example.unnamedgroup12project.ProjectViewModel
 import com.example.unnamedgroup12project.R
 import com.example.unnamedgroup12project.databinding.ActivityMainBinding
 import com.example.unnamedgroup12project.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), Communicator {
     private lateinit var binding: ActivityMainBinding
 
     // fragment support, each fragment gets initialized
@@ -63,5 +63,21 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.content, fragment)
         fragmentTransaction.commit()
+    }
+
+
+
+    override fun passDataCom(toPass: ArrayList<String>) {
+        val bundle = Bundle()
+        bundle.putStringArrayList("input_txt", toPass)
+
+        val transaction = this.supportFragmentManager.beginTransaction()
+        val frag2 = MarketDetailFragment()
+        frag2.arguments = bundle
+
+        transaction.replace(R.id.content, frag2)
+        transaction.addToBackStack(null)
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+        transaction.commit()
     }
 }
