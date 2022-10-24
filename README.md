@@ -101,11 +101,17 @@ An app to find local Farmer's Markets, their vendors, and how to reach them.
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+Initial wireframe developed during Unit 7 session
+<img src="https://github.com/CodePath-AND102-Group-12/Temp/blob/master/Group%2012%20Initial%20Wireframe.png?raw=true" width="600">
 
 ### [BONUS] Digital Wireframes & Mockups
+Refined wireframe after the Unit 7 session
+<img src="https://github.com/CodePath-AND102-Group-12/Temp/blob/master/Group%2012%20Final%20Digital%20Wireframe.png?raw=true" width="600">
 
-https://www.figma.com/community/file/1166378987628110358
+[Also viewable on Figma](https://www.figma.com/community/file/1166378987628110358)
 
 ### [BONUS] Interactive Prototype
+<img src="https://github.com/CodePath-AND102-Group-12/Temp/blob/master/Group%2012%20Interactice%20Prototype.gif?raw=true" height="600">
+
+[Recorded with Kap for MacOS](https://getkap.co/)
+
