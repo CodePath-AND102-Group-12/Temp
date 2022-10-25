@@ -3,6 +3,7 @@ package com.example.unnamedgroup12project
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.unnamedgroup12project.objects.Market
 
 class ProjectViewModel(): ViewModel() {
 
@@ -18,4 +19,9 @@ class ProjectViewModel(): ViewModel() {
         _name.value = passName
     }
 
+    private var _market = MutableLiveData<Market>()
+    val market: LiveData<Market> = _market
+    fun setMarketData(passMarket: Market) {
+        _market.value = passMarket
+    }
 }

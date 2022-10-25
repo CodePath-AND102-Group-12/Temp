@@ -8,22 +8,26 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.unnamedgroup12project.Communicator
+import com.example.unnamedgroup12project.ProjectViewModel
 import com.example.unnamedgroup12project.R
 import com.example.unnamedgroup12project.adapters.FeaturedMarketListingAdapter
 import com.example.unnamedgroup12project.adapters.MarketListingAdapter
 import com.example.unnamedgroup12project.database.MarketFetcher
 import com.example.unnamedgroup12project.objects.Market
 
-class MarketListingFragment : Fragment() {
+class MarketListingFragment : Fragment(), MarketListingAdapter.ClickListener {
     private lateinit var featuredMarketListingAdapter : FeaturedMarketListingAdapter
     private lateinit var allMarketListingAdapter: MarketListingAdapter
     private val marketList = arrayListOf<Market>()
+    //private lateinit var comm: Communicator
 
-    private lateinit var comm: Communicator
+    private val viewModel: ProjectViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,10 +56,12 @@ class MarketListingFragment : Fragment() {
         val allMarketListLayoutManager = GridLayoutManager(context, 2)
         val allMarketListRecyclerView = view.findViewById<RecyclerView>(R.id.allMarketsRecyclerView)
 
-        comm = requireActivity() as Communicator
+        //comm = requireActivity() as Communicator
 
-        allMarketListingAdapter = MarketListingAdapter(marketList, this.requireActivity().applicationContext,
-            requireActivity() as AppCompatActivity, comm
+        allMarketListingAdapter = MarketListingAdapter(marketList,
+            requireContext(),
+            this
+            //,comm
         )
 
         allMarketListRecyclerView.adapter = allMarketListingAdapter
@@ -87,5 +93,14 @@ class MarketListingFragment : Fragment() {
         fun newInstance(): MarketListingFragment {
             return MarketListingFragment()
         }
+    }
+
+    override fun gotoMarketDetail(position: Int, marketData: Market) {
+        viewModel.setMarketData(marketData)
+        val transaction = (context as AppCompatActivity).supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.content, MarketDetailFragment())
+        transaction.addToBackStack(null)
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+        transaction.commit()
     }
 }
