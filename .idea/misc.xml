@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/drawable/hero_image.xml" value="0.2385" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/drawable/ic_market_list.xml" value="0.1" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/drawable/ic_settings.xml" value="0.1" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/drawable/ic_shopping_list.xml" value="0.1" />
         <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/layout/activity_login.xml" value="0.36231884057971014" />
-        <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/layout/activity_main.xml" value="0.29438405797101447" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/layout/fragment_map.xml" value="0.36231884057971014" />
         <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/layout/fragment_market.xml" value="0.29438405797101447" />
         <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/layout/fragment_market_detail.xml" value="0.36231884057971014" />
         <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/layout/fragment_settings.xml" value="0.36231884057971014" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/layout/market_layout.xml" value="0.21240942028985507" />
         <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/menu/bottom_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/menu/nav_menu.xml" value="0.3" />
       </map>
