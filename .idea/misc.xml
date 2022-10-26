@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/activity_main.xml" value="0.46770833333333334" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/featured_market_layout.xml" value="0.46770833333333334" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/fragment_calendar.xml" value="0.46770833333333334" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/fragment_map.xml" value="0.46770833333333334" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/fragment_market.xml" value="0.46770833333333334" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/fragment_market_detail.xml" value="0.46770833333333334" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/fragment_market_listing.xml" value="0.46770833333333334" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/fragment_settings.xml" value="0.46770833333333334" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/fragment_shopping_list.xml" value="0.46770833333333334" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/fragment_vendor_detail.xml" value="0.46770833333333334" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/market_layout.xml" value="0.46770833333333334" />
         <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/layout/activity_login.xml" value="0.36231884057971014" />
         <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/layout/activity_main.xml" value="0.29438405797101447" />
         <entry key="..\:/Users/coale/AndroidStudioProjects/UnnamedGroup12Project/app/src/main/res/layout/fragment_map.xml" value="0.36231884057971014" />
