@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -36,6 +37,16 @@ android {
 }
 
 dependencies {
+
+    /** Firebase Libraries**/
+    implementation 'com.google.firebase:firebase-database:20.1.0'
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
+
+    implementation 'com.google.firebase:firebase-database-ktx:20.1.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.1.0'
+
     /**Added room dep and kapt plugin**/
     def room_version = "2.4.2"
     implementation "androidx.room:room-runtime:$room_version"
@@ -51,6 +62,9 @@ dependencies {
 
     /** Added Glide dep **/
     implementation 'com.github.bumptech.glide:glide:4.13.2'
+
+    /** Progress bar library**/
+    implementation 'com.jpardogo.googleprogressbar:library:1.2.0'
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'

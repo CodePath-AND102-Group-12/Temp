@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/drawable/ic_shopping_list.xml" value="0.4165" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/activity_add_market.xml" value="0.36730072463768115" />
         <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/activity_main.xml" value="0.46770833333333334" />
+        <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/dialog_wait.xml" value="0.5" />
         <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/featured_market_layout.xml" value="0.46770833333333334" />
         <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/fragment_calendar.xml" value="0.46770833333333334" />
         <entry key="..\:/Users/Home/AndroidStudioProjects/Temp/app/src/main/res/layout/fragment_map.xml" value="0.46770833333333334" />
